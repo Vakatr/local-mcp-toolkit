@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "mcp-filesystem",
+      "env": {
+        "MCP_FS_READ_ROOT": "C:/Users/you/Documents",
+        "MCP_FS_ROOT": "C:/Users/you/Documents/agent-workspace"
+      }
+    },
+    "python-runner": {
+      "command": "mcp-python-runner",
+      "env": {
+        "MCP_RUNNER_ROOT": "C:/Users/you/projects",
+        "MCP_RUNNER_MAX_TIMEOUT": "120"
+      }
+    },
+    "delegate": {
+      "command": "mcp-delegate",
+      "env": {
+        "DELEGATE_BASE_URL": "http://localhost:1234/v1",
+        "DELEGATE_DEFAULT_MODEL": "local-model",
+        "DELEGATE_TIMEOUT": "120",
+        "DELEGATE_API_KEY": ""
+      }
+    }
+  }
+}
