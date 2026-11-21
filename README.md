@@ -14,6 +14,14 @@ one Python package:
 All servers use the MCP stdio transport: they start as child processes of the MCP
 client, do not bind network ports, and need no daemon.
 
+```mermaid
+flowchart LR
+  Client[MCP client] -->|stdio| FS[filesystem]
+  Client -->|stdio| PY[python-runner]
+  Client -->|stdio| DEL[delegate]
+  DEL -->|HTTP(S)| LLM[OpenAI-compatible endpoint]
+```
+
 ## Requirements
 
 - Python 3.10 or newer
